@@ -1,0 +1,948 @@
+:root {
+    --primary: #0a1f3c;
+    --secondary: #111;
+    --light: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: var(--light);
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main-header {
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.btn-nav {
+    background: var(--primary);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 5px;
+}
+
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url('../images/hero-image.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.grid-3, .grid-4, .grid-2 {
+    display: grid;
+    gap: 30px;
+}
+
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); }
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.dark-section {
+    background: var(--primary);
+    color: white;
+}
+
+.dark-section .card {
+    background: #142c54;
+    color: white;
+}
+
+.counters {
+    background: #f5f7fa;
+    padding: 60px 0;
+}
+
+.counter-card {
+    text-align: center;
+}
+
+.counter-card h2 {
+    font-size: 40px;
+    color: var(--primary);
+}
+
+footer {
+    background: white;
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 220px;
+}
+
+.social-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Move CTA button lower and to the right */
+.cta-section .btn-primary {
+    display: inline-block;       /* keeps it block-level for spacing */
+    margin-top: 30px;            /* push it down */
+    float: right;                /* move to the right */
+    padding: 15px 35px;          /* optional: make it bigger for emphasis */
+    font-size: 1.1rem;           /* slightly larger */
+}
+
+/* Hero Zoom Effect */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hero-content h1,
+.hero-content p {
+  animation: zoomInOut 1.2s ease-out forwards;
+}
+
+
+
+
+/* ==============================
+   CONTACT PAGE STYLING
+============================== */
+
+/* Hero Section */
+.contact-hero {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    padding: 100px 0 60px;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: zoomIn 1s ease-out;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Contact Grid */
+.contact-grid {
+    gap: 40px;
+    margin-top: 50px;
+}
+
+/* Big Floating Cards */
+.card.big {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.big:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* Contact Form */
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #2a5298;
+    box-shadow: 0 0 10px rgba(42, 82, 152, 0.3);
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-block;
+    background: #2a5298;
+    color: #fff;
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #1e3c72;
+    transform: scale(1.05);
+}
+
+/* Contact Info Styling */
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: #2a5298;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #1e3c72;
+}
+
+/* Map Placeholder */
+.map-placeholder {
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ddd, #ccc);
+    margin-top: 15px;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    background: #f5f7fa;
+    padding: 60px 20px;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Animations */
+@keyframes zoomIn {
+    0% {transform: scale(0.8); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* ==============================
+   SERVICES PAGE STYLING
+============================== */
+
+/* HERO / INTRO */
+.services-hero {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    padding: 100px 20px 60px;
+    text-align: center;
+}
+
+.services-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: zoomIn 1s ease-out;
+}
+
+.services-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* SERVICES GRID */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+/* Big Service Cards */
+.service-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.05);
+}
+
+.service-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* CTA SECTION */
+.cta-section {
+    text-align: center;
+    background: #f5f7fa;
+    padding: 60px 20px;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.cta-section .btn-primary {
+    background: #2a5298;
+    color: #fff;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-section .btn-primary:hover {
+    background: #1e3c72;
+    transform: scale(1.05);
+}
+
+/* ANIMATIONS */
+@keyframes zoomIn {
+    0% {transform: scale(0.8); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+    .services-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .service-card img {
+        height: 180px;
+    }
+}
+
+
+
+
+
+
+/* ==============================
+   PORTFOLIO PAGE STYLING
+============================== */
+
+/* HERO SECTION */
+.portfolio-hero {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    padding: 120px 20px 80px;
+    text-align: center;
+}
+
+.portfolio-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: zoomIn 1s ease-out;
+}
+
+.portfolio-hero p {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* FEATURED PROJECTS */
+.featured-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.project-card.featured {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card.featured:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.project-card.featured img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card.featured:hover img {
+    transform: scale(1.05);
+}
+
+.project-card.featured .card-body {
+    padding: 25px;
+}
+
+.project-card.featured .card-body h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.project-card.featured .card-body p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.project-card.featured .badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 12px;
+    background: #2a5298;
+    color: #fff;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+/* PORTFOLIO GALLERY */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.portfolio-grid .card.floating {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.portfolio-grid .card.floating:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+.portfolio-grid .card.floating img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-grid .card.floating:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-grid .card.floating h4 {
+    font-size: 1.4rem;
+    margin: 15px 0 10px;
+}
+
+.portfolio-grid .card.floating p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    padding: 0 15px 20px;
+}
+
+/* CALL TO ACTION */
+.cta-section {
+    text-align: center;
+    background: #f5f7fa;
+    padding: 80px 20px;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.cta-section .btn-primary {
+    background: #2a5298;
+    color: #fff;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-section .btn-primary:hover {
+    background: #1e3c72;
+    transform: scale(1.05);
+}
+
+/* ANIMATIONS */
+@keyframes zoomIn {
+    0% {transform: scale(0.8); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+    .portfolio-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .portfolio-grid .card.floating img {
+        height: 180px;
+    }
+
+    .project-card.featured img {
+        height: 180px;
+    }
+}
+
+
+
+
+/* ==============================
+   ABOUT PAGE STYLING
+============================== */
+
+/* HERO / HEADER SECTION */
+.about-hero {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px 60px;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: zoomIn 1s ease-out;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* ABOUT SECTIONS GRID */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.about-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.about-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ABOUT PAGE FULL DESCRIPTION */
+.about-description {
+    max-width: 1000px;
+    margin: 60px auto 40px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: center;
+}
+
+.about-description strong {
+    color: #2a5298;
+}
+
+/* TEAM / ADDITIONAL INFO GRID */
+.about-extra {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* CTA SECTION */
+.cta-section {
+    text-align: center;
+    background: #f5f7fa;
+    padding: 80px 20px;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.cta-section .btn-primary {
+    background: #2a5298;
+    color: #fff;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-section .btn-primary:hover {
+    background: #1e3c72;
+    transform: scale(1.05);
+}
+
+/* ANIMATIONS */
+@keyframes zoomIn {
+    0% {transform: scale(0.8); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+/* ==============================
+   GLOBAL RESPONSIVE FIXES
+============================== */
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make containers flexible */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Grid fixes for mobile */
+@media screen and (max-width: 1024px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Stack everything into 1 column */
+    .grid-4,
+    .grid-3,
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Hero adjustments */
+    .hero {
+        height: auto;
+        padding: 120px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Navigation menu vertical */
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-flex {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Section spacing */
+    .section {
+        padding: 60px 0;
+    }
+}
+
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+
