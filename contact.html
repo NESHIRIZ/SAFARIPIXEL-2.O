@@ -8,22 +8,30 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="main-header">
 <div class="container header-flex">
+
 <img src="images/logo.png" class="logo" alt="SAFARIPIXEL Logo">
-<nav>
+
+<!-- Hamburger Button -->
+<div class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<nav id="nav-menu">
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="services.html">Services</a></li>
 <li><a href="portfolio.html">Portfolio</a></li>
 <li><a href="about.html">About</a></li>
-<li><a href="contact.html" class="active btn-nav">Contact</a></li>
+<li><a href="contact.html" class="btn-nav">Contact</a></li>
 </ul>
 </nav>
+
 </div>
 </header>
-
 <!-- HERO -->
 <section class="contact-hero">
 <div class="container hero-content">
@@ -56,8 +64,14 @@
 </form>
 </div>
 
-<!-- CONTACT INFO CARD -->
+<!-- CONTACT INFO + IMAGE CARD -->
 <div class="card big floating">
+
+<!-- Professional Image -->
+<div class="contact-image-wrapper">
+<img src="images/KNOW.png" alt="Professional Consultation" class="contact-image">
+</div>
+
 <h3>Our Contact Information</h3>
 <div class="contact-info">
 <p><strong>Email:</strong> <a href="mailto:info@safaripixel.com">info@safaripixel.com</a></p>
@@ -70,6 +84,7 @@
 <div class="map-placeholder" style="height:250px; border-radius:10px; background:#eee;">
 <!-- Optional: Replace with Google Map iframe -->
 </div>
+
 </div>
 
 </div>
